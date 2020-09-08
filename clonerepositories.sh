@@ -38,16 +38,17 @@ fi
 #
 # git clone repositories
 #
-${GIT_PATH}=${POOL_PATH}/${GIT}
-mkdir -p ${GIT_PATH}
-cd ${GIT_PATH}
+GIT_LOC=${POOL_PATH}/${GIT_PATH}
+mkdir -p ${GIT_LOC}
+echo "GIT_PATH ="${GIT_LOC}
+cd ${GIT_LOC}
 git clone https://github.com/NasKar2/freenas-iocage-sepapps.git
 git clone https://github.com/NasKar2/freenas-iocage-other.git
 git clone https://github.com/NasKar2/freenas-iocage-backupapps.git
 git clone https://github.com/NasKar2/freenas-iocage-configs_backup.git
 #git clone https://github.com/NasKar2/freenas-iocage-nextcloud.git
-mkdir ${GIT_PATH}/danb35
-cd ${GIT_PATH}/danb35
+mkdir ${GIT_LOC}/danb35
+cd ${GIT_LOC}/danb35
 git clone https://github.com/danb35/freenas-iocage-nextcloud.git
 git clone https://github.com/danb35/freenas-iocage-caddy.git
 git clone https://github.com/danb35/freenas-iocage-plex.git
